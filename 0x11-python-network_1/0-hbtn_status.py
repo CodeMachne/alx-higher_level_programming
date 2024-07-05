@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 import urllib.request
-with urllib.request.Request('https://alx-intranet.hbtn.io/status')as status:
+req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
+with urllib.request.urlopen(req)as status:
     html = status.read()
